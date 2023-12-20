@@ -75,4 +75,15 @@ class MemoDetailViewModel: CommonViewModel {
         
         }
     }
+    
+    
+    //삭제 버튼과 바인딩할 액션
+    func makeDeleteAction() -> CocoaAction {
+        return Action { input in
+            self.storage.delete(memo: self.memo)
+            return self.sceneCoordinator.close(animated: true)
+                .asObservable()
+                .map {_ in }
+        }
+    }
 }

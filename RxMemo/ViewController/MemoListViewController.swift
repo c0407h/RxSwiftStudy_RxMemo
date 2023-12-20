@@ -51,6 +51,13 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
             .bind(to: viewModel.detailAction.inputs)
             .disposed(by: rx.disposeBag)       
         
+        //테이블뷰에서 스와이프 삭제 버튼을 활성화
+        //삭제버튼과 액션을 바인딩
+        listTableView.rx.modelDeleted(Memo.self)
+            .throttle(.microseconds(500), scheduler: MainScheduler.instance)
+            .bind(to: viewModel.deleteAction.inputs)
+            .disposed(by: rx.disposeBag)
+        
         
     }
 

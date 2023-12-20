@@ -65,6 +65,10 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
             })
             .disposed(by: rx.disposeBag)
         
+        deleteButton.rx.action = viewModel.makeDeleteAction()
+          
+        
+        
 //        var backButton = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
 //        //타이틀이 driver형태로 제공되기때문에 생성자로 전달할 수 없고 바인딩해야함
 //        viewModel.title

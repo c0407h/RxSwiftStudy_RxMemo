@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import RxDataSources // tableview 와 colletionview에 바인딩 할 수있는 datasource를 제공
 
-struct Memo: Equatable {
+struct Memo: Equatable, IdentifiableType {
     var content: String //메모 컨텐츠
     var insertDate: Date //메모 생성날짜
     var identity: String //메모를 구분할때 사용

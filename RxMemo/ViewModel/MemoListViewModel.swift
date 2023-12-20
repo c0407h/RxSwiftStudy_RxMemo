@@ -9,6 +9,9 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Action
+import RxDataSources
+
+typealias MemoSectionModel = AnimatableSectionModel<Int, Memo>
 
 class MemoListViewModel: CommonViewModel {
     //ViewModel에는 크게 두가지가 추가됨
@@ -19,10 +22,32 @@ class MemoListViewModel: CommonViewModel {
     //메모 목록화면에서 필요한 것은 메모 목록임
     //따라서 테이블뷰와 바인딩 할 수 있는 속성을 추가해야함
     
-    var memoList: Observable<[Memo]> {
+//    var memoList: Observable<[Memo]> {
+//        return storage.memoList()
+//        //저장소에 구현되어잇는 메모리스트 호출 후 메소드가 리턴하는 옵저버블을 그대로 리턴
+//    }
+    
+    //Observable이 메모 배열을 방출하는데 이부분을 RxDataSources가 요구하는 방식으로 바꾸자
+    //섹션 모델을 생성한 다음 섹션데이터와 로우 데이터를 저장하고 옵저버블이 섹션 모델배열을 방출하도록 수정해야함
+    //RxDataSources가 제공하는 기본 섹션 모델중에서 애니메이터블 섹션 모델을 사용하자
+    
+//    var memoList: Observable<[MemoListViewModel]> {
+    var memoList: Observable<[MemoSectionModel]> {
         return storage.memoList()
-        //저장소에 구현되어잇는 메모리스트 호출 후 메소드가 리턴하는 옵저버블을 그대로 리턴
+//        return storage.memoList()
     }
+    
+    //테이블뷰 바인딩에 사용할 데이터 소스를 속성으로 선언
+    let dataSource: RxTableViewSectionedAnimatedDataSource<MemoSectionModel> = {
+        let ds = RxTableViewSectionedAnimatedDataSource<MemoSectionModel>(configureCell: { (dataSource, tableView, indexPath, memo) -> UITableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            cell.textLabel?.text = memo.content
+            return cell
+        })
+        ds.canEditRowAtIndexPath = { _, _ in return true}
+        return ds
+    }()
+    
     
     func makeCreateAction() -> CocoaAction {
         return CocoaAction { _ in

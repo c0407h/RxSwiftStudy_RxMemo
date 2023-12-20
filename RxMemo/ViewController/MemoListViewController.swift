@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import NSObject_Rx
+import RxDataSources
 
 class MemoListViewController: UIViewController, ViewModelBindableType {
     
@@ -32,10 +33,13 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
         
         //메모목록을 테이블뷰에 바인딩
         //옵저버블과 테이블뷰를 바인딩하는 방식
+//        viewModel.memoList
+//            .bind(to: listTableView.rx.items(cellIdentifier: "cell")) {row, memo, cell in
+//                cell.textLabel?.text = memo.content
+//            }
+//            .disposed(by: rx.disposeBag)
         viewModel.memoList
-            .bind(to: listTableView.rx.items(cellIdentifier: "cell")) {row, memo, cell in
-                cell.textLabel?.text = memo.content
-            }
+            .bind(to: listTableView.rx.items(dataSource: viewModel.dataSource))
             .disposed(by: rx.disposeBag)
         
         

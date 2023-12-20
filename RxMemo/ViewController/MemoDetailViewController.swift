@@ -54,7 +54,16 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
         
         editButton.rx.action = viewModel.makeEditAction()
         
-        
+        shareButton.rx.tap
+            .throttle(.microseconds(500), scheduler: MainScheduler.instance) //더블탭 방지
+            .withUnretained(self)
+            .subscribe(onNext: { (vc, _) in
+                let memo = vc.viewModel.memo.content
+                
+                let activityVC = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
+                vc.present(activityVC, animated: true)
+            })
+            .disposed(by: rx.disposeBag)
         
 //        var backButton = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
 //        //타이틀이 driver형태로 제공되기때문에 생성자로 전달할 수 없고 바인딩해야함

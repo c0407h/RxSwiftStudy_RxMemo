@@ -33,6 +33,7 @@ class MemoComposeViewModel: CommonViewModel {
     
     init(title:String, content: String? = nil, sceneCoordinator: SceneCoordinatorType, storage: MemoStorageType, saveAction: Action<String, Void>? = nil, cancelAction: CocoaAction? = nil) {
         self.content = content
+        
         self.saveAction = Action<String, Void> { input in
             if let action = saveAction{
                 action.execute(input)
@@ -47,6 +48,7 @@ class MemoComposeViewModel: CommonViewModel {
             }
             return sceneCoordinator.close(animated: true).asObservable().map { _ in }
         }
+        
         super.init(title: title, sceneCoordinator: sceneCoordinator, storage: storage)
         //ViewModel에서 저장코드와 취소코드를 직접구현해도 되지만 이처럼 파라메터로 받으면
         //ViewModel에서 직접 받으면 처리방식이 하나로 고정됨

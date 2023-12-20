@@ -10,6 +10,9 @@
 		412A15722B33028F0044FA88 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A15712B33028F0044FA88 /* Memo.swift */; };
 		412A15752B33039A0044FA88 /* MemoStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A15742B33039A0044FA88 /* MemoStorageType.swift */; };
 		412A15792B3304740044FA88 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A15782B3304740044FA88 /* MemoryStorage.swift */; };
+		412A157B2B330B600044FA88 /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A157A2B330B600044FA88 /* MemoListViewController.swift */; };
+		412A157D2B330B9C0044FA88 /* MemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A157C2B330B9C0044FA88 /* MemoDetailViewController.swift */; };
+		412A157F2B330BD20044FA88 /* MemoComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A157E2B330BD20044FA88 /* MemoComposeViewController.swift */; };
 		41971F6C2B32FD0600EA83EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41971F6B2B32FD0600EA83EA /* AppDelegate.swift */; };
 		41971F6E2B32FD0600EA83EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41971F6D2B32FD0600EA83EA /* SceneDelegate.swift */; };
 		41971F732B32FD0600EA83EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41971F712B32FD0600EA83EA /* Main.storyboard */; };
@@ -24,6 +27,9 @@
 		412A15712B33028F0044FA88 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		412A15742B33039A0044FA88 /* MemoStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStorageType.swift; sourceTree = "<group>"; };
 		412A15782B3304740044FA88 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
+		412A157A2B330B600044FA88 /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
+		412A157C2B330B9C0044FA88 /* MemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewController.swift; sourceTree = "<group>"; };
+		412A157E2B330BD20044FA88 /* MemoComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoComposeViewController.swift; sourceTree = "<group>"; };
 		41971F682B32FD0600EA83EA /* RxMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41971F6B2B32FD0600EA83EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41971F6D2B32FD0600EA83EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +67,9 @@
 			children = (
 				41971F712B32FD0600EA83EA /* Main.storyboard */,
 				41971F792B32FD0700EA83EA /* LaunchScreen.storyboard */,
+				412A157A2B330B600044FA88 /* MemoListViewController.swift */,
+				412A157C2B330B9C0044FA88 /* MemoDetailViewController.swift */,
+				412A157E2B330BD20044FA88 /* MemoComposeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -272,10 +281,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				412A15792B3304740044FA88 /* MemoryStorage.swift in Sources */,
+				412A157D2B330B9C0044FA88 /* MemoDetailViewController.swift in Sources */,
 				41971F6C2B32FD0600EA83EA /* AppDelegate.swift in Sources */,
 				412A15752B33039A0044FA88 /* MemoStorageType.swift in Sources */,
 				41971F6E2B32FD0600EA83EA /* SceneDelegate.swift in Sources */,
 				41971F762B32FD0600EA83EA /* RxMemo.xcdatamodeld in Sources */,
+				412A157B2B330B600044FA88 /* MemoListViewController.swift in Sources */,
+				412A157F2B330BD20044FA88 /* MemoComposeViewController.swift in Sources */,
 				412A15722B33028F0044FA88 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +442,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9UU59NTC96;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RxMemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -460,6 +473,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9UU59NTC96;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RxMemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

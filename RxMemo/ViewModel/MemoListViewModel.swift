@@ -56,5 +56,30 @@ class MemoListViewModel: CommonViewModel {
         }
     }
     
+    lazy var detailAction: Action<Memo, Void> = {
+        //클로저 내부에서 self에 접근해야하기때문에 lazy로 선언
+        return Action { memo in
+            //viewmodel을 만들고 scene을 만들어
+            //scenecoordinator의 trasition을 호출하여 실제로 화면 전환
+            
+            let detailViewModel = MemoDetailViewModel(memo: memo, title: "메모 보기", sceneCoordinator: self.sceneCoordinator as! SceneCoordinator, storage: self.storage as! MemoryStorage)
+            
+            let detailScene = Scene.detail(detailViewModel)
+            
+            return self.sceneCoordinator.transition(to: detailScene, using: .push, animated: true)
+                .asObservable()
+                .map {_ in }
+            
+            
+            
+        }
+    }()
+    
+    lazy var popAction = CocoaAction{ [unowned self] in
+        return self.sceneCoordinator.close(animated: true)
+            .asObservable()
+            .map {_ in}
+    }
+    
     
 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		41971F6C2B32FD0600EA83EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41971F6B2B32FD0600EA83EA /* AppDelegate.swift */; };
 		41971F6E2B32FD0600EA83EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41971F6D2B32FD0600EA83EA /* SceneDelegate.swift */; };
-		41971F702B32FD0600EA83EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41971F6F2B32FD0600EA83EA /* ViewController.swift */; };
 		41971F732B32FD0600EA83EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41971F712B32FD0600EA83EA /* Main.storyboard */; };
 		41971F762B32FD0600EA83EA /* RxMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41971F742B32FD0600EA83EA /* RxMemo.xcdatamodeld */; };
 		41971F782B32FD0700EA83EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41971F772B32FD0700EA83EA /* Assets.xcassets */; };
@@ -22,7 +21,6 @@
 		41971F682B32FD0600EA83EA /* RxMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41971F6B2B32FD0600EA83EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41971F6D2B32FD0600EA83EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		41971F6F2B32FD0600EA83EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		41971F722B32FD0600EA83EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41971F752B32FD0600EA83EA /* RxMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RxMemo.xcdatamodel; sourceTree = "<group>"; };
 		41971F772B32FD0700EA83EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +42,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		412A156D2B3300CB0044FA88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		412A156E2B3300D10044FA88 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				41971F712B32FD0600EA83EA /* Main.storyboard */,
+				41971F792B32FD0700EA83EA /* LaunchScreen.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		412A156F2B3300D70044FA88 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		412A15702B33022A0044FA88 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		41971F5F2B32FD0600EA83EA = {
 			isa = PBXGroup;
 			children = (
@@ -65,12 +93,13 @@
 		41971F6A2B32FD0600EA83EA /* RxMemo */ = {
 			isa = PBXGroup;
 			children = (
+				412A15702B33022A0044FA88 /* Scene */,
+				412A156F2B3300D70044FA88 /* ViewModel */,
+				412A156E2B3300D10044FA88 /* ViewController */,
+				412A156D2B3300CB0044FA88 /* Model */,
 				41971F6B2B32FD0600EA83EA /* AppDelegate.swift */,
 				41971F6D2B32FD0600EA83EA /* SceneDelegate.swift */,
-				41971F6F2B32FD0600EA83EA /* ViewController.swift */,
-				41971F712B32FD0600EA83EA /* Main.storyboard */,
 				41971F772B32FD0700EA83EA /* Assets.xcassets */,
-				41971F792B32FD0700EA83EA /* LaunchScreen.storyboard */,
 				41971F7C2B32FD0700EA83EA /* Info.plist */,
 				41971F742B32FD0600EA83EA /* RxMemo.xcdatamodeld */,
 			);
@@ -91,7 +120,6 @@
 				3B01B91A52C7D2D9EDD12EEB /* Pods-RxMemo.debug.xcconfig */,
 				A017C8F540D03EAC6E0EE8E6 /* Pods-RxMemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,7 +238,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41971F702B32FD0600EA83EA /* ViewController.swift in Sources */,
 				41971F6C2B32FD0600EA83EA /* AppDelegate.swift in Sources */,
 				41971F6E2B32FD0600EA83EA /* SceneDelegate.swift in Sources */,
 				41971F762B32FD0600EA83EA /* RxMemo.xcdatamodeld in Sources */,

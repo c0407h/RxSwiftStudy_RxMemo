@@ -23,5 +23,4 @@ class MemoListViewModel: CommonViewModel {
         return storage.memoList()
         //저장소에 구현되어잇는 메모리스트 호출 후 메소드가 리턴하는 옵저버블을 그대로 리턴
     }
-    
 }

@@ -26,6 +26,7 @@ extension ViewModelBindableType where Self: UIViewController {
         self.viewModel = viewModel
         loadViewIfNeeded()
         
+        
         bindViewModel()
         //ViewController에서 bind(viewModel:)메소드를 직접 호출할 필요가 없기때문에 코드가 단순해짐
         

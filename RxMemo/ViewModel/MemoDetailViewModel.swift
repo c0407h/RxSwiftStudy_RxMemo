@@ -72,8 +72,6 @@ class MemoDetailViewModel: CommonViewModel {
             return self.sceneCoordinator.transition(to: composeScene, using: .modal, animated: true)
                 .asObservable()
                 .map { _ in }
-            
-        
         }
     }
     

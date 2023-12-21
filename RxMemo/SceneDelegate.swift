@@ -18,7 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //앱을 실행하면 MemoryStorage와 SceneCoordinator가 생성됨
         //viewmodel은 두 인스턴스를 통해서 메모를 저장하고 화면전환을 처리함
-        let storage = MemoryStorage()
+//        let storage = MemoryStorage()
+        
+        let storage = CoreDataStorage(modelName: "RxMemo")
         let coordinator = SceneCoordinator(window: window!)
         
         //위 두 인스턴스에 대한 의존성은 viewmodel을 생성할때 init을 통해 주입함
@@ -61,7 +63,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
 

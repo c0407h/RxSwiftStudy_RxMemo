@@ -87,7 +87,7 @@ class MemoListViewModel: CommonViewModel {
             //viewmodel을 만들고 scene을 만들어
             //scenecoordinator의 trasition을 호출하여 실제로 화면 전환
             
-            let detailViewModel = MemoDetailViewModel(memo: memo, title: "메모 보기", sceneCoordinator: self.sceneCoordinator as! SceneCoordinator, storage: self.storage as! MemoryStorage)
+            let detailViewModel = MemoDetailViewModel(memo: memo, title: "메모 보기", sceneCoordinator: self.sceneCoordinator, storage: self.storage)
             
             let detailScene = Scene.detail(detailViewModel)
             

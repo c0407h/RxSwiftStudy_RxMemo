@@ -32,7 +32,7 @@ class MemoDetailViewModel: CommonViewModel {
     //일반 Observable로 선언하면 이게불가능 하기때문에 BehaviorSubject로 선언
     var contents: BehaviorSubject<[String]>
     
-    init(memo: Memo, title: String, sceneCoordinator: SceneCoordinator, storage: MemoryStorage) {
+    init(memo: Memo, title: String, sceneCoordinator: SceneCoordinatorType, storage: MemoStorageType) {
         self.memo = memo
         contents = BehaviorSubject<[String]>(value: [
             memo.content,

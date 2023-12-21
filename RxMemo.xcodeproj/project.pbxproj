@@ -22,6 +22,7 @@
 		412A158D2B3311D60044FA88 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A158C2B3311D60044FA88 /* SceneCoordinatorType.swift */; };
 		412A158F2B33128B0044FA88 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A158E2B33128B0044FA88 /* SceneCoordinator.swift */; };
 		412A15912B33171D0044FA88 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A15902B33171D0044FA88 /* CommonViewModel.swift */; };
+		413A25192B3420EF00A63E3B /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A25182B3420EF00A63E3B /* CoreDataStorage.swift */; };
 		41971F6C2B32FD0600EA83EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41971F6B2B32FD0600EA83EA /* AppDelegate.swift */; };
 		41971F6E2B32FD0600EA83EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41971F6D2B32FD0600EA83EA /* SceneDelegate.swift */; };
 		41971F732B32FD0600EA83EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41971F712B32FD0600EA83EA /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		412A158C2B3311D60044FA88 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
 		412A158E2B33128B0044FA88 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		412A15902B33171D0044FA88 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
+		413A25182B3420EF00A63E3B /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		41971F682B32FD0600EA83EA /* RxMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41971F6B2B32FD0600EA83EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41971F6D2B32FD0600EA83EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				41971F742B32FD0600EA83EA /* RxMemo.xcdatamodeld */,
+				413A25182B3420EF00A63E3B /* CoreDataStorage.swift */,
 			);
 			path = CoreDataStorage;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				412A15792B3304740044FA88 /* MemoryStorage.swift in Sources */,
+				413A25192B3420EF00A63E3B /* CoreDataStorage.swift in Sources */,
 				412A15852B330C7C0044FA88 /* MemoComposeViewModel.swift in Sources */,
 				412A158F2B33128B0044FA88 /* SceneCoordinator.swift in Sources */,
 				412A158B2B330F8C0044FA88 /* Scene.swift in Sources */,
